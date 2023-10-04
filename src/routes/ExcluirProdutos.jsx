@@ -15,7 +15,7 @@ export default function ExcluirProdutos() {
 
   useEffect(() => { 
     fetch("http://localhost:5000/produtos", {
-      method: "DELETE",
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
@@ -26,17 +26,35 @@ export default function ExcluirProdutos() {
     
   });
 
-  //Recuperar o produto na lista pelo ID.
-  const produto = listaProdutoExterno.filter((produto) => produto.id == id)[0];
+
+  // Recuperar o produto na lista pelo ID.
+  const produto = listaProdutoExterno.filter((produto) => produto.id == id);
+  const prod = produto[0];
+  
 
   const handleDelete = (event) => {
     event.preventDefault();
 
     let indice;
-
     indice = listaProdutoExterno.findIndex((item) => item.id === produto.id);
 
     listaProdutoExterno.splice(indice, 1);
+    fetch(`http://localhost:5000/produtos/${prod.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+        
+    })
+    .then (fetch('http://localhost:5000/produtos', )
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error('Erro ao buscar dados:', error);
+      }));
+    
 
     alert("Produto exclído com sucesso!");
 
@@ -50,8 +68,8 @@ export default function ExcluirProdutos() {
         <div className={style.card}>
             <h2>Produto Selecionado</h2>
             <figure>
-                <img src={produto.img} alt={produto.desc} title={produto.desc}/>
-                <figcaption>{produto.nome} - <span>R$ </span>{produto.preco}</figcaption>
+                <img src={prod.img} alt={prod.desc} title={prod.desc}/>
+                <figcaption>{prod.nome} - <span>R$ </span>{prod.preco}</figcaption>
             </figure>
             <div className={style.btn}>
                 <button onClick={handleDelete}>EXCLUIR</button>
