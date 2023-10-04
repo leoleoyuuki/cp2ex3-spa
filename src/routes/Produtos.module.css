@@ -1,0 +1,53 @@
+.estilo{
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .tableHeaders{
+        background-color: #4c4c4c;
+        text-align: center;
+
+        & th{
+            border: 2px solid #ccc;
+            background-color: #4c4c4c;
+            color: #fff;
+        }
+
+    }
+
+    .tableLine{
+        background-color: #ccc;
+        &:hover{
+            background-color: #555555;
+            color: #fff;
+        }
+
+        & td{
+            border :2px solid #e1e1e1;
+            &:first-child{
+                text-align: center;
+            }
+            &:last-child{
+                text-align: center;
+            }
+            & img{
+                width: 120px;
+            }
+        }
+    }
+
+    .tableLine:hover{
+        background-color: #ccc;
+    }
+    .tableData{
+        border: 1px solid #000;
+        
+    
+    }
+
+
+    .tableFooter{
+        background-color: #4c4c4c;
+        text-align: center;
+    }
+}
