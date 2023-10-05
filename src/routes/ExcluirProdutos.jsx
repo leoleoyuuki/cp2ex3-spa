@@ -46,16 +46,8 @@ export default function ExcluirProdutos() {
       },
         
     })
-    .then (fetch('http://localhost:5000/produtos', )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.error('Erro ao buscar dados:', error);
-      }));
     
-
+      
     alert("Produto exclído com sucesso!");
 
     navigate("/produtos");
@@ -68,6 +60,7 @@ export default function ExcluirProdutos() {
         <div className={style.card}>
             <h2>Produto Selecionado</h2>
             <figure>
+            
                 <img src={prod.img} alt={prod.desc} title={prod.desc}/>
                 <figcaption>{prod.nome} - <span>R$ </span>{prod.preco}</figcaption>
             </figure>
