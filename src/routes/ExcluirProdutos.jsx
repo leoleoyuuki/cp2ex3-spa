@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
-import style from "./ExcluirProdutos.module.css";
+import style from "./ExcluirProdutos.module.scss";
 import { useEffect, useState } from "react";
-
+// import style from "./EditarProdutos.module.scss";
 export default function ExcluirProdutos() {
   document.title = "Excluir Produtos";
 

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+figcaption span {
+  font-weight: bold;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 50px; /* Torna os botões redondos */
+}
+
+button:nth-child(1) {
+  background-color: #df2b17;
+  color: #fff;
+  border: none;
+}
+
+button:nth-child(1):hover {
+  background-color: #c0392b;
+  color: #000000; 
+}
+
+button:nth-child(2) {
+  background-color: #219cee;
+  color: #000000;
+  border: none;
+}
+
+button:nth-child(2):hover {
+  background-color: #2980b9;
+  color: #fff; 
+}
